@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // Connect manually
 const runCheck = async () => {
   try {
-    const mongoURI = 'mongodb+srv://dmpatel299:darshan123@eventcraft.gwdcyr1.mongodb.net/eventify?retryWrites=true&w=majority';
+    const mongoURI = 'use url';
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
