@@ -1,0 +1,108 @@
+.admin-settings {
+  padding: 2rem 0;
+}
+
+.admin-settings h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.settings-nav {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.settings-nav .list-group-item {
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.settings-nav .list-group-item:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 3px solid var(--primary-color, #667eea);
+}
+
+.settings-nav .list-group-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-bottom: 1px solid #e9ecef;
+  padding: 1.25rem 1.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Form */
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color, #667eea);
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-control:disabled {
+  background: #f8f9fa;
+}
+
+/* Toggle Switch */
+.form-switch .form-check-input {
+  width: 3rem;
+  height: 1.75rem;
+  cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--primary-color, #667eea);
+  border-color: var(--primary-color, #667eea);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-settings .row > [class*="col-"] {
+    margin-bottom: 1.5rem;
+  }
+
+  .settings-nav {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .settings-nav .list-group-item {
+    white-space: nowrap;
+    border-left: none !important;
+    border-bottom: 3px solid transparent;
+  }
+
+  .settings-nav .list-group-item.active {
+    border-bottom: 3px solid white;
+    border-left: none !important;
+  }
+}

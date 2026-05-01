@@ -1,0 +1,203 @@
+.admin-payments {
+  padding: 2rem 0;
+}
+
+.admin-payments h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Stats Cards */
+.stats-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stats-card h3 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stats-card:first-child h3 {
+  color: #667eea;
+}
+
+.stats-card:nth-child(2) h3 {
+  color: #28a745;
+}
+
+/* Table */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  background: #e9ecef;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+/* Badge Colors */
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .modal-title {
+  font-weight: 600;
+  color: var(--primary-color, #667eea);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+/* Table in Modal */
+.modal-body .table {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.modal-body .table td {
+  padding: 0.5rem 0;
+  border-top: none;
+}
+
+.modal-body .table td:first-child {
+  font-weight: 500;
+  color: #495057;
+  width: 40%;
+}
+
+/* Refund Item */
+.list-unstyled li {
+  border-left: 3px solid #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-payments .row.mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+
+  .table-responsive {
+    border: none;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+}

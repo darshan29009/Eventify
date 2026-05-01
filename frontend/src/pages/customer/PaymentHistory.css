@@ -1,0 +1,149 @@
+.payment-history {
+  padding: 2rem 0;
+}
+
+.payment-history h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Stats Cards */
+.stats-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stats-card h3 {
+  font-weight: 700;
+  color: var(--primary-color, #667eea);
+}
+
+.stats-card p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Table */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  background: #e9ecef;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+/* Badge Colors */
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Empty State */
+.card-body.text-center {
+  padding: 3rem 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-history .row.mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+
+  .table-responsive {
+    border: none;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-top: none;
+  }
+
+  .table tbody td:before {
+    content: attr(data-label);
+    font-weight: 500;
+    color: #495057;
+  }
+
+  .table tbody td:first-child {
+    background: #f8f9fa;
+    border-radius: 8px 0 0 8px !important;
+  }
+
+  .table tbody td:last-child {
+    border-radius: 0 8px 8px 0 !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 769px) {
+  .table td {
+    position: relative;
+  }
+
+  .table td:before {
+    content: attr(data-label);
+    font-weight: 500;
+    color: #6c757d;
+    display: none;
+  }
+}
