@@ -77,8 +77,6 @@ git --version
 ### Step 4: Create Database User
 1. In left sidebar, click "Database Access"
 2. Click "Add New Database User"
-3. **Username:** `dmpatel299` (or your choice)
-4. **Password:** `darshan123` (or your choice - save this!)
 5. Database User Privileges: **Read and write to any database**
 6. Click "Add User"
 
@@ -86,15 +84,8 @@ git --version
 1. In left sidebar, click "Database"
 2. Click "Connect" on your `eventcraft` cluster
 3. Choose **"Connect your application"**
-4. Copy connection string:
-   ```
-   mongodb+srv://dmpatel299:<password>@eventcraft.gwdcyr1.mongodb.net/
-   ```
-5. Replace `<password>` with your actual password (`darshan123`)
-6. Add database name at end:
-   ```
-   mongodb+srv://dmpatel299:darshan123@eventcraft.gwdcyr1.mongodb.net/eventify?retryWrites=true&w=majority
-   ```
+
+
 
 **✅ Done!** Your MongoDB Atlas is ready.
 
