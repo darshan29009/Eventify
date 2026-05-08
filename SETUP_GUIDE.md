@@ -115,28 +115,7 @@ npm install
 Wait for all packages to install (2-3 minutes).
 
 ### Step 3: Verify `.env` File
-The `.env` file should already exist with this configuration:
 
-```env
-# MongoDB Atlas
-MONGODB_URI=mongodb+srv://dmpatel299:darshan123@eventcraft.gwdcyr1.mongodb.net/eventify?retryWrites=true&w=majority
-
-# JWT (keep these as is or change)
-JWT_SECRET=eventify-super-secret-jwt-key-change-this-in-production-2024
-JWT_EXPIRE=7d
-JWT_REFRESH_SECRET=eventify-refresh-token-secret-change-this-2024
-JWT_REFRESH_EXPIRE=30d
-
-# Email (optional - configure if you want emails)
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-
-# Payment (optional - configure if testing payments)
-STRIPE_SECRET_KEY=sk_test_xxx
-STRIPE_PUBLISHABLE_KEY=pk_test_xxx
-```
-
-**Important:** Keep `MONGODB_URI` exactly as above with your credentials.
 
 ### Step 4: Test MongoDB Connection
 ```bash
