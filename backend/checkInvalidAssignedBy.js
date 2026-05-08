@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const runCheck = async () => {
   try {
-    const mongoURI = 'your url';
+    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/eventify';
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
